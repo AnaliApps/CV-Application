@@ -1,32 +1,39 @@
 import React from "react";
 
 function CVInfo({CVInfoItem,handleEdit,handleDelete}){
+    // const CVinfoStyles = {
+    //     backgroundColor:'lightgray',
+    //     borderRadius:'5px',
+    // };
     return(
         <div>
             <div className="allinformation">
+                <h1>CURRICULUM VITAE</h1>
                 <div className="personalInformation">
-                    <h1>Personal Information</h1>
-                    <h2>FullName: {CVInfoItem.fname}</h2>
-                    <h3>Contact Email: {CVInfoItem.contactMail}</h3>
-                    <h3>Contact Phone: {CVInfoItem.contactPhone}</h3>
+                    <h2>Personal Information</h2>
+                    <p><strong>FullName : </strong>{CVInfoItem.fname}</p>
+                    <p><strong>Contact Email : </strong>{CVInfoItem.contactMail}</p>
+                    <p><strong>Contact Phone :</strong> {CVInfoItem.contactPhone}</p>
                 </div>
                 <div className="educationalInformation">
-                    <h1>Educational Information</h1>
-                    <p>School Name: {CVInfoItem.schoolname}</p>
-                    <p>Title of Study: {CVInfoItem.studytitle}</p>
-                    <p>Date of Study: {CVInfoItem.datestudy}</p>
+                    <h2>Educational Information</h2>
+                    <p><strong>School Name :</strong> {CVInfoItem.schoolname}</p>
+                    <p><strong>Title of Study :</strong> {CVInfoItem.studytitle}</p>
+                    <p><strong>Date of Study :</strong> {CVInfoItem.datestudy}</p>
                 </div>
                 <div className="workexperience">
-                    <h1>Work Experience</h1>
-                    <p>Company Name: {CVInfoItem.companyname}</p>
-                    <p>Position Held: {CVInfoItem.title}</p>
-                    <p>Description of Work done: {CVInfoItem.desc}</p>
-                    <p>Start Date: {CVInfoItem.startdate}</p>
-                    <p>End Date: {CVInfoItem.enddate}</p>
+                    <h2>Work Experience</h2>
+                    <p><strong>Company Name :</strong> {CVInfoItem.companyname}</p>
+                    <p><strong>Position Held :</strong> {CVInfoItem.title}</p>
+                    <p><strong>Description of Work done :</strong> {CVInfoItem.desc}</p>
+                    <p><strong>Start Date :</strong> {CVInfoItem.startdate}</p>
+                    <p><strong>End Date :</strong> {CVInfoItem.enddate}</p>
                 </div>
-                <div>
-                    <button onClick={()=>handleEdit(CVInfoItem)}>Edit</button>
-                    <button onClick={()=>handleDelete(CVInfoItem)}>Delete</button>
+                <div className="btns">
+                    <div>
+                        <button onClick={()=>handleEdit(CVInfoItem)}>Edit</button>
+                        <button onClick={()=>handleDelete(CVInfoItem)}>Delete</button>
+                    </div>
                 </div>
             </div>
         </div>
