@@ -33,6 +33,7 @@ function App() {
       setPositionTitle('')
       setResponsibilityDesc('')
     }
+    
     function handleSubmit(e){
       e.preventDefault()
       let id = new Date().getTime();
@@ -47,7 +48,6 @@ function App() {
       let description = responsibilityDesc
       let fromDate = dateWorkedFrom
       let toDate = dateWorkedTo
-
       setInfo((prevInfo)=>{
         let updatedInfo = [...prevInfo,{id:id,fname:name,contactMail:mail,contactPhone:phon,schoolname:nameOfSch,studytitle:titleOfStudy,datestudy:dateOfStudy,companyname:nameOfCompany,title:titleName,desc:description,startdate:fromDate,enddate:toDate}]
         console.log(updatedInfo)

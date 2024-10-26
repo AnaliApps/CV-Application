@@ -1,10 +1,6 @@
 import React from "react";
 
 function CVInfo({CVInfoItem,handleEdit,handleDelete}){
-    // const CVinfoStyles = {
-    //     backgroundColor:'lightgray',
-    //     borderRadius:'5px',
-    // };
     return(
         <div>
             <div className="allinformation">
